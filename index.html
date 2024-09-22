@@ -1,13 +1,64 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>DONATE BANGLADESH</title>
+    <link rel="shortcut icon" href="assets/logo.png" type="image/x-icon">
+
+    <!-- Tailwind Css -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        clifford: '#da373d',
+                    }
+                }
+            }
+        }
+    </script>
+
+
 </head>
 
 <body>
+    <header id="headernavbar" class="bg-white sticky top-0 z-50 transition-all duration-300">
+        <!-- Navigation Bar -->
+        <nav id="navbar" class=" navbar justify-around py-7">
+            <button class="btn text-xl font-semibold text-gray-900 bg-yellow-300 px-6 rounded-lg">Blog</button>
+
+            <!-- Donate Bangladesh -->
+            <div class="flex space-x-4 items-center justify-center">
+                <img src="assets/logo.png" alt="Logo" class="w-8 h-8">
+                <p class="text-xl font-bold text-gray-900">Donate Bangladesh</p>
+            </div>
+
+            <!-- Available balance -->
+            <div class="flex space-x-3 items-center">
+                <div class="w-7 h-7">
+                    <img src="assets/coin.png" alt="Coin">
+                </div>
+                <p class="text-xl font-bold text-gray-900 text-opacity-70"><span>5500</span> BDT</p>
+            </div>
+        </nav>
+
+        <!-- Header -->
+        <div class="flex flex-col items-center w-full py-8">
+            <div class="flex items-center space-x-4">
+                <button class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg bg-yellow-300">Donation</button>
+                <button
+                    class="btn btn-xs sm:btn-sm md:btn-md lg:btn-lg border-gray-900 border-opacity-30 text-xl font-medium text-gray-900 text-opacity-70">History</button>
+            </div>
+        </div>
+    </header>
+
+    <main></main>
+    <footer></footer>
+
 
     <script src="js/index.js"></script>
 </body>
