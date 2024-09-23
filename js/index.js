@@ -86,3 +86,8 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleFunctions.toggleSections("donation-section");
   toggleFunctions.toggleActiveButton("donation-btn");
 });
+
+function updateDonationMessage(title) {
+  const donationMessage = document.getElementById("donation-message");
+  donationMessage.textContent = `You Have Donated for ${title}`;
+}

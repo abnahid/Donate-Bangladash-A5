@@ -34,8 +34,11 @@
     <header id="headernavbar" class="bg-white sticky top-0 z-50 transition-all duration-300">
         <!-- Navigation Bar -->
         <nav id="navbar" class=" navbar justify-around py-7">
-            <button class="btn text-xl font-semibold text-gray-900 bg-btn-primary px-6 rounded-lg"
-                id="home">Home</button>
+            <a href="index.html">
+                <button class="btn text-xl font-semibold text-gray-900 bg-btn-primary px-6 rounded-lg"
+                    id="home-btn">Home</button>
+            </a>
+
 
             <!-- Donate Bangladesh -->
             <div class="flex space-x-4 items-center justify-center">
@@ -54,7 +57,88 @@
         </nav>
     </header>
 
+    <main class="container mx-auto p-5">
+
+        <section class="my-32">
+            <h3 class="text-5xl font-bold text-center mb-12">Frequently Asked <span
+                    class="text-[#B4F461]">Questions</span></h3>
+
+            <div class="space-y-5">
+                <div class="collapse collapse-arrow border border-[#B4F461] ">
+                    <input type="radio" name="my-accordion-2" checked="checked" />
+                    <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?
+                    </div>
+                    <div class="collapse-content">
+                        <p>The Document Object Model (DOM) is a programming interface for HTML and XML documents 1. It
+                            represents the structure of a web page as a tree-like structure, allowing developers to
+                            access, manipulate, and update the elements and content dynamically 3.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow border border-[#B4F461] ">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?
+                    </div>
+                    <div class="collapse-content">
+                        <h2>You can select elements from the DOM using several methods in JavaScript:</h2>
+                        <ul class="list-disc list-inside space-y-2">
+                            <li>
+                                <strong>By ID:</strong><br>
+                                Use <code>document.getElementById(id)</code> to select an element by its unique ID.
+                            </li>
+                            <li>
+                                <strong>By Class:</strong><br>
+                                Use <code>document.getElementsByClassName(className)</code> to select elements with a
+                                specific class name. This returns a live HTMLCollection.
+                            </li>
+                            <li>
+                                <strong>By Tag Name:</strong><br>
+                                Use <code>document.getElementsByTagName(tagName)</code> to select elements by their tag
+                                name. This also returns a live HTMLCollection.
+                            </li>
+                            <li>
+                                <strong>Using CSS Selectors:</strong><br>
+                                Use <code>document.querySelector(selector)</code> to select the first element that
+                                matches a CSS selector.
+                            </li>
+                            <li>
+                                <strong>Select All Matching Elements:</strong><br>
+                                Use <code>document.querySelectorAll(selector)</code> to select all elements that match a
+                                CSS selector. This returns a static NodeList.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow border border-[#B4F461] ">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">What is event delegation, and why is it useful?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Event delegation is a technique where you attach a single event listener to a parent element
+                            instead of multiple listeners to individual child elements. This is useful because it
+                            reduces memory usage and improves performance, especially with dynamic content. When an
+                            event occurs, the listener checks if it originated from a specific child element.</p>
+                    </div>
+                </div>
+                <div class="collapse collapse-arrow border border-[#B4F461]">
+                    <input type="radio" name="my-accordion-2" />
+                    <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and
+                        styles using the DOM?
+                    </div>
+                    <div class="collapse-content">
+                        <p>Safety First! Always obey the rules of the road. Obey all traffic signals, signs, and
+                            laws. Get in the mindset of “driving” your bike—not just “riding” your bike. This
+                            will help you be a more focused and legally compliant bike rider. </p>
+                    </div>
+                </div>
+            </div>
+
+        </section>
+
+    </main>
+
     <script src="js/index.js"></script>
+    <script src="js/reusable.js"></script>
+    <script src="js/history.js"></script>
 
 </body>
 
