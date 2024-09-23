@@ -15,3 +15,58 @@ document.addEventListener("scroll", function () {
     navbar.classList.add("bg-red-50");
   }
 });
+
+// Button - Using toggle
+function toggleSections(showSectionIdsId) {
+  const sectionIds = ["donation-section", "history-section"];
+  const btnIds = ["donation-btn", "history-btn"];
+
+  sectionIds.forEach((id) => {
+    if (id === showSectionIdsId) {
+      document.getElementById(id).classList.remove("hidden");
+    } else {
+      document.getElementById(id).classList.add("hidden");
+    }
+  });
+
+  function toggleActiveButton(activeBtnId) {
+    btnIds.forEach((btnId) => {
+      if (btnId === activeBtnId) {
+        document.getElementById(btnId).classList.add("bg-btn-primary");
+        document
+          .getElementById(btnId)
+          .classList.remove(
+            "border",
+            "border-gray-900",
+            "border-opacity-30",
+            "text-opacity-70"
+          );
+      } else {
+        document.getElementById(btnId).classList.remove("bg-btn-primary");
+        document
+          .getElementById(btnId)
+          .classList.add(
+            "border",
+            "border-gray-900",
+            "border-opacity-30",
+            "text-opacity-70"
+          );
+      }
+    });
+  }
+
+  return { toggleSections, toggleActiveButton };
+}
+
+// Set up event listeners for buttons
+const toggleFunctions = toggleSections("donation-section");
+document.getElementById("donation-btn").addEventListener("click", () => {
+  toggleFunctions.toggleSections("donation-section");
+  toggleFunctions.toggleActiveButton("donation-btn");
+});
+
+const historyToggleFunctions = toggleSections("history-section");
+document.getElementById("history-btn").addEventListener("click", () => {
+  historyToggleFunctions.toggleSections("history-section");
+  historyToggleFunctions.toggleActiveButton("history-btn");
+});

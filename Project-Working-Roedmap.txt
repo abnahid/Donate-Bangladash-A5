@@ -8,9 +8,9 @@
      🚀 Include Donation and History buttons (design according to Figma). ✅
 
 2. Donation Cards Section 3 :
-   👉 Create three donation cards with:
-     🚀 Image on the left, title, info, current donation amount, and input field.
-     🚀 Add a Donate Now button to submit the donation. 
+   👉 Create three donation cards with:✅
+     🚀 Image on the left, title, info, current donation amount, and input field.✅
+     🚀 Add a Donate Now button to submit the donation. ✅
 
 3. Donation Functionality:
    👉 Deduct the donation amount from the total account balance when the donation is made, and show the updated balance.
@@ -23,14 +23,14 @@
    🚀 Shows transaction details such as date, time, donation name, and amount after each donation. 
 
 5. Toggle Buttons:
-   🚀 Clicking the History button should hide the donation cards and display the history section.
-   🚀 Clicking the Donation button should show the donation cards and hide the history. 
+   🚀 Clicking the History button should hide the donation cards and display the history section. ✅
+   🚀 Clicking the Donation button should show the donation cards and hide the history. ✅
 
 
 ### Challenges:
 
 1. Sticky Navbar:
-   👉 Ensure the navbar stays fixed at the top of the page when scrolling. 
+   👉 Ensure the navbar stays fixed at the top of the page when scrolling. ✅
 
 2. Blog Page (Optional):
    👉 Create a `blog.html` file that answers the following questions:
@@ -42,12 +42,12 @@
 3. Input Modal:
    🚀 Instead of an alert on a successful donation, show a static modal confirming the donation and updating the history. 
 4. Button Active States:
-   🚀 Toggle the color of the Donation and History buttons based on which is active. 
+   🚀 Toggle the color of the Donation and History buttons based on which is active. ✅
 
 5. Reusable Functions:
-   🚀 Implement at least two common functions for reusability. 
+   🚀 Implement at least two common functions for reusability. ✅
 
 6. Responsive Design:
-   🚀 Ensure that the application is responsive across mobile, tablet, and desktop. 
+   🚀 Ensure that the application is responsive across mobile, tablet, and desktop. ✅ 
 
 ✅
