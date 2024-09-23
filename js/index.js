@@ -16,13 +16,19 @@ document.addEventListener("scroll", function () {
   }
 });
 
+// close confirmation
+function closeModal() {
+  const modal = document.getElementById("my_modal_5");
+  modal.close();
+}
+
 // Button - Using toggle
-function toggleSections(showSectionIdsId) {
+function toggleSections(showSectionId) {
   const sectionIds = ["donation-section", "history-section"];
   const btnIds = ["donation-btn", "history-btn"];
 
   sectionIds.forEach((id) => {
-    if (id === showSectionIdsId) {
+    if (id === showSectionId) {
       document.getElementById(id).classList.remove("hidden");
     } else {
       document.getElementById(id).classList.add("hidden");
@@ -69,4 +75,14 @@ const historyToggleFunctions = toggleSections("history-section");
 document.getElementById("history-btn").addEventListener("click", () => {
   historyToggleFunctions.toggleSections("history-section");
   historyToggleFunctions.toggleActiveButton("history-btn");
+});
+
+document.getElementById("blog").addEventListener("click", function () {
+  window.location.href = "./blog.html";
+});
+
+// Initialize the default active button
+document.addEventListener("DOMContentLoaded", function () {
+  toggleFunctions.toggleSections("donation-section");
+  toggleFunctions.toggleActiveButton("donation-btn");
 });

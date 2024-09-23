@@ -36,7 +36,8 @@
     <header id="headernavbar" class="bg-white sticky top-0 z-50 transition-all duration-300">
         <!-- Navigation Bar -->
         <nav id="navbar" class=" navbar justify-around py-7">
-            <button class="btn text-xl font-semibold text-gray-900 bg-btn-primary px-6 rounded-lg">Blog</button>
+            <button class="btn text-xl font-semibold text-gray-900 bg-btn-primary px-6 rounded-lg"
+                id="blog">Blog</button>
 
             <!-- Donate Bangladesh -->
             <div class="flex space-x-4 items-center justify-center">
@@ -68,7 +69,7 @@
     </header>
 
     <main>
-        <section id="donation-section">
+        <section id="donation-section" class="block">
             <!-- Donation Cards 1-->
             <div class="flex items-center justify-center px-4 py-10 bg-white">
                 <div class="flex flex-col space-y-8 max-w-5xl w-full">
@@ -84,12 +85,15 @@
                                 <div class="w-6 h-6 ">
                                     <img src="assets/coin.png" alt="Icon" />
                                 </div>
-                                <p class="text-base text-gray-900 text-opacity-70" id="total-donate-noakhali">1000 BDT
+                                <p class="text-base text-gray-900 text-opacity-70"><span
+                                        id="total-donate-noakhali">1000</span>
+                                    BDT
                                 </p>
                             </div>
 
                             <div class="flex flex-col space-y-4">
-                                <p class="text-xl font-bold text-gray-900">Donate for Flood at Noakhali, Bangladesh</p>
+                                <p class="text-xl font-bold text-gray-900" id="noakhali-title">Donate for Flood at
+                                    Noakhali, Bangladesh</p>
                                 <p class="text-base font-light text-gray-900 text-opacity-70">
                                     The recent floods in Noakhali have caused significant damage to homes and
                                     infrastructure. Your donation will help provide essential supplies to those affected
@@ -106,9 +110,10 @@
                                     <input type="text" placeholder="Write Donation Amount"
                                         class="input input-bordered w-full focus:outline-none" id="donate-noakhali" />
                                 </div>
-                                <button
-                                    class="px-8 py-4 rounded-lg bg-btn-primary text-xl font-semibold text-gray-900">Donate
-                                    Now</button>
+                                <button id="donate-now-noakhali"
+                                    class="px-8 py-4 rounded-lg bg-btn-primary text-xl font-semibold text-gray-900"
+                                    onclick="my_modal_5.showModal();">Donate Now</button>
+
                             </div>
                         </div>
                     </div>
@@ -129,7 +134,8 @@
                                 <div class="w-6 h-6 ">
                                     <img src="assets/coin.png" alt="Icon" />
                                 </div>
-                                <p class="text-base text-gray-900 text-opacity-70">1000 BDT</p>
+                                <p class="text-base text-gray-900 text-opacity-70"><span
+                                        id="total-donate-feni">1000</span> BDT</p>
                             </div>
 
                             <div class="flex flex-col space-y-4">
@@ -148,9 +154,10 @@
                             <div class="flex flex-col space-y-4">
                                 <div class="input-group">
                                     <input type="text" placeholder="Write Donation Amount"
-                                        class="input input-bordered w-full focus:outline-none" />
+                                        class="input input-bordered w-full focus:outline-none" id="donate-feni" />
                                 </div>
-                                <button class="btn bg-btn-primary text-xl font-semibold text-gray-900">Donate
+                                <button class="btn bg-btn-primary text-xl font-semibold text-gray-900"
+                                    id="donate-now">Donate
                                     Now</button>
                             </div>
                         </div>
@@ -173,7 +180,8 @@
                                 <div class="w-6 h-6 ">
                                     <img src="assets/coin.png" alt="Icon" />
                                 </div>
-                                <p class="text-base text-gray-900 text-opacity-70">1000 BDT</p>
+                                <p class="text-base text-gray-900 text-opacity-70"><span
+                                        id="total-donate-quota">1000</span>BDT</p>
                             </div>
 
                             <div class="flex flex-col space-y-4">
@@ -192,9 +200,11 @@
                             <div class="flex flex-col space-y-4">
                                 <div class="input-group">
                                     <input type="text" placeholder="Write Donation Amount"
-                                        class="input input-bordered w-full focus:outline-none" />
+                                        class="input input-bordered w-full focus:outline-none"
+                                        id="donate-quota-protest" />
                                 </div>
-                                <button class="btn bg-btn-primary text-xl font-semibold text-gray-900">Donate
+                                <button class="btn bg-btn-primary text-xl font-semibold text-gray-900"
+                                    id="donate-now">Donate
                                     Now</button>
                             </div>
                         </div>
@@ -205,14 +215,33 @@
 
         <!-- History Section -->
         <section id="history-section" class="hidden container mx-auto">
-            <h3>Hello History I'm Working</h3>
+
+            <div id="history-list" class="flex flex-col space-y-4">
+
+            </div>
         </section>
+
+        <!-- Open the modal using ID.showModal() method -->
+        <dialog id="my_modal_5" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box flex flex-col items-center justify-center text-center">
+                <h3 class="text-5xl font-bold">Congrates!</h3>
+                <img src="assets/coin.png" alt="" class="size-8 mt-4">
+                <p class="py-4 text-lg">You Have Donated for Humankind</p>
+                <p class="font-semibold text-2xl text-success">Successfully</p>
+                <div class="modal-action">
+                    <button class="btn btn-outline" onclick="closeModal()">close confirmation</button>
+                </div>
+            </div>
+        </dialog>
 
 
     </main>
     <footer></footer>
 
     <script src="js/index.js"></script>
+    <script src="js/donate.js"></script>
+    <script src="js/history.js"></script>
+
 </body>
 
 </html>
