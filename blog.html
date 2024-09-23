@@ -1,14 +1,60 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>DONATE BANGLADESH Blog</title>
+
+    <!-- Tailwind Css -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        "btn-primary": "#B4F461",
+                    },
+                    fontFamily: {
+                        lexend: ["Lexend", "sans-serif"],
+                    },
+                }
+            }
+        }
+    </script>
+
+    <!-- Font Cdn -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
 </head>
 
-<body>
-    <h2>FAQ</h2>
+<body class="font-lexend">
+    <header id="headernavbar" class="bg-white sticky top-0 z-50 transition-all duration-300">
+        <!-- Navigation Bar -->
+        <nav id="navbar" class=" navbar justify-around py-7">
+            <button class="btn text-xl font-semibold text-gray-900 bg-btn-primary px-6 rounded-lg"
+                id="home">Home</button>
+
+            <!-- Donate Bangladesh -->
+            <div class="flex space-x-4 items-center justify-center">
+                <img src="assets/logo.png" alt="Logo" class="w-8 h-8">
+                <p class="text-xl font-bold text-gray-900">Donate Bangladesh</p>
+            </div>
+
+            <!-- Available balance -->
+            <div class="flex space-x-3 items-center">
+                <div class="w-7 h-7">
+                    <img src="assets/coin.png" alt="Coin">
+                </div>
+                <p class="text-xl font-bold text-gray-900 text-opacity-70"><span id="account-balance">7500</span> BDT
+                </p>
+            </div>
+        </nav>
+    </header>
+
+    <script src="js/index.js"></script>
 
 </body>
 

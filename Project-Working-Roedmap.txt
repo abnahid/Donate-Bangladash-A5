@@ -40,7 +40,7 @@
      🚀 How do you manipulate an element's attributes and styles using the DOM? 
 
 3. Input Modal:
-   🚀 Instead of an alert on a successful donation, show a static modal confirming the donation and updating the history. 
+   🚀 Instead of an alert on a successful donation, show a static modal confirming the donation and updating the history. ✅
 4. Button Active States:
    🚀 Toggle the color of the Donation and History buttons based on which is active. ✅
 
