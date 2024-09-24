@@ -16,12 +16,6 @@ document.addEventListener("scroll", function () {
   }
 });
 
-// close confirmation
-function closeModal() {
-  const modal = document.getElementById("my_modal_5");
-  modal.close();
-}
-
 // Button - Using toggle
 function toggleSections(showSectionId) {
   const sectionIds = ["donation-section", "history-section"];
@@ -87,7 +81,7 @@ document.addEventListener("DOMContentLoaded", function () {
   toggleFunctions.toggleActiveButton("donation-btn");
 });
 
-function updateDonationMessage(title) {
-  const donationMessage = document.getElementById("donation-message");
-  donationMessage.textContent = `You Have Donated for ${title}`;
-}
+// function updateDonationMessage(title) {
+//   const donationMessage = document.getElementById("donation-message");
+//   donationMessage.textContent = `You Have Donated for ${title}`;
+// }

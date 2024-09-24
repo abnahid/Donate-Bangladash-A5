@@ -8,15 +8,26 @@ function handleDonation(donateInputId, balanceId, totalDonateId, description) {
     const balanceElement = document.getElementById(balanceId);
     const balance = parseFloat(balanceElement.innerText);
 
-    if (isNaN(donateNumber) || donateNumber <= 0) {
-      alert("Please enter a valid positive number for donation.");
+    const donationModal = document.getElementById("donation-modal");
+    const donationError = document.getElementById("donation-error");
+    const donationMessage = document.getElementById("donation-message");
+    const donationWarningMessage = document.getElementById(
+      "donation-warning-message"
+    );
+
+    if (!donateNumber || isNaN(donateNumber) || donateNumber <= 0) {
+      donationWarningMessage.innerText =
+        "Please enter a valid positive number for donation.";
+      donationError.showModal();
       return;
     }
 
     const newBalance = balance - donateNumber;
 
     if (newBalance < 0) {
-      alert("You cannot donate more than your available balance.");
+      donationWarningMessage.innerText =
+        "You cannot donate more than your available balance.";
+      donationError.showModal();
       return;
     }
 
@@ -27,10 +38,22 @@ function handleDonation(donateInputId, balanceId, totalDonateId, description) {
     totalDonationElement.innerText = previousDonation + donateNumber;
 
     appendTransactionDetails(donateNumber, description);
+
+    donationMessage.innerText = `Thank you for your donation of ${donateNumber} ৳`;
+    donationModal.showModal();
   };
 }
 
-// Use the handler for Noakhali donations
+document.getElementById("close-confirm").addEventListener("click", function () {
+  const donationModal = document.getElementById("donation-modal");
+  donationModal.close();
+});
+
+document.getElementById("close-again").addEventListener("click", function () {
+  const donationErrorModal = document.getElementById("donation-error");
+  donationErrorModal.close();
+});
+
 document
   .getElementById("donate-now-noakhali")
   .addEventListener(
