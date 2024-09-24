@@ -1,4 +1,3 @@
-// Reusable donation handler function
 function handleDonation(donateInputId, balanceId, totalDonateId, description) {
   return function (event) {
     event.preventDefault();

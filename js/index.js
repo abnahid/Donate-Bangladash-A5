@@ -1,4 +1,3 @@
-// Sticky NavBer
 document.addEventListener("scroll", function () {
   const headernavbar = document.getElementById("headernavbar");
   const navbar = document.getElementById("navbar");
@@ -16,7 +15,6 @@ document.addEventListener("scroll", function () {
   }
 });
 
-// Button - Using toggle
 function toggleSections(showSectionId) {
   const sectionIds = ["donation-section", "history-section"];
   const btnIds = ["donation-btn", "history-btn"];
@@ -58,7 +56,6 @@ function toggleSections(showSectionId) {
   return { toggleSections, toggleActiveButton };
 }
 
-// Set up event listeners for buttons
 const toggleFunctions = toggleSections("donation-section");
 document.getElementById("donation-btn").addEventListener("click", () => {
   toggleFunctions.toggleSections("donation-section");
@@ -71,17 +68,11 @@ document.getElementById("history-btn").addEventListener("click", () => {
   historyToggleFunctions.toggleActiveButton("history-btn");
 });
 
-document.getElementById("blog").addEventListener("click", function () {
-  window.location.href = "./blog.html";
-});
-
-// Initialize the default active button
 document.addEventListener("DOMContentLoaded", function () {
   toggleFunctions.toggleSections("donation-section");
   toggleFunctions.toggleActiveButton("donation-btn");
 });
 
-// function updateDonationMessage(title) {
-//   const donationMessage = document.getElementById("donation-message");
-//   donationMessage.textContent = `You Have Donated for ${title}`;
-// }
+document.getElementById("blog").addEventListener("click", function () {
+  window.location.href = "./blog.html";
+});
